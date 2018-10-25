@@ -72,31 +72,35 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>include;src;lib;$(IncludePath)</IncludePath>
+    <IncludePath>include;$(IncludePath)</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
-    <LibraryPath>opengl32.lib;glfw3.lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>include;src;lib;$(IncludePath)</IncludePath>
+    <IncludePath>include;$(IncludePath)</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
-    <LibraryPath>opengl32.lib;glfw3.lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>include;src;lib;$(IncludePath)</IncludePath>
+    <IncludePath>include;$(IncludePath)</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
-    <LibraryPath>opengl32.lib;glfw3.lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>include;src;lib;$(IncludePath)</IncludePath>
+    <IncludePath>include;$(IncludePath)</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
-    <LibraryPath>opengl32.lib;glfw3.lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>lib;$(LibraryPath)</LibraryPath>
+    <SourcePath>src;$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -111,6 +115,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -126,6 +131,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -145,6 +151,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -164,6 +171,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
